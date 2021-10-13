@@ -1,0 +1,5 @@
+# Exclude .idea folder
+.idea
+
+# IntelliJ
+out/
