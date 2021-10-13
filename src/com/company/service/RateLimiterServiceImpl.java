@@ -8,7 +8,7 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RateLimiterServiceServiceImpl implements RateLimiterService {
+public class RateLimiterServiceImpl implements RateLimiterService {
     // x requests
     private final int customerRequestQuota;
     // y seconds
@@ -16,7 +16,7 @@ public class RateLimiterServiceServiceImpl implements RateLimiterService {
     // customer request cache
     private final List<CustomerRequestStorage> customerRequestStorageList;
 
-    public RateLimiterServiceServiceImpl(int customerRequestQuota, int customerRequestTtl) {
+    public RateLimiterServiceImpl(int customerRequestQuota, int customerRequestTtl) {
         this.customerRequestQuota = customerRequestQuota;
         this.customerRequestTtl = customerRequestTtl;
         customerRequestStorageList = new ArrayList<>();
