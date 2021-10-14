@@ -53,7 +53,7 @@ public class RateLimiterServiceImpl implements RateLimiterService {
             var entryList = new ArrayList<>(customerRequestStorage.getRequestStorage().getRequestCache().entrySet());
             var lastRequestTimestamp = entryList.get(entryList.size() - 1).getKey();
 
-            if (customerRequestTtl < lastRequestTimestamp - currenTimestamp) {
+            if (customerRequestTtl < currenTimestamp - lastRequestTimestamp) {
                 customerRequestStorage.getRequestStorage().getRequestCache().put(currenTimestamp, currentRequest);
                 return true;
             } else {
